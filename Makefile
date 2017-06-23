@@ -1,4 +1,4 @@
-NAME = FdF
+NAME = Fractol
 
 PATHTOMAKEFILE = ./libft/
 
