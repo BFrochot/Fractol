@@ -6,7 +6,7 @@
 /*   By: bfrochot <bfrochot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/23 12:20:17 by bfrochot          #+#    #+#             */
-/*   Updated: 2017/06/23 23:00:47 by bfrochot         ###   ########.fr       */
+/*   Updated: 2017/06/25 17:59:23 by bfrochot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,13 @@ void	ft_draw_julia(t_env *e)
 	int			y;
 
 	x = 0;
-	while (x < 2560)
+	while (x < 1000)
 	{
 		y = 0;
-		while (y < 1440)
+		while (y < 1000)
 		{
-			n.r = 1.5 * (x - 800 / 2) / (0.5 * e->z * 800) + e->movex;
-			n.i = (y - 800 / 2) / (0.5 * e->z * 800) + e->movey;
+			n.r = 1.5 * (x - 1000 / 2) / (0.5 * e->z * 1000) + e->movex;
+			n.i = (y - 1000 / 2) / (0.5 * e->z * 1000) + e->movey;
 			color = (e->col * (ft_is_julia(&n, e) % 0xff));
 			put_pixel(x, y, color, e);
 			y++;
@@ -56,13 +56,8 @@ void	ft_draw_julia(t_env *e)
 
 int		fdfinit(t_env *ev)
 {
-	printf("Init : mlx = %p et win = %p\n", ev->mlx, ev->win);
-	mlx_clear_window(ev->mlx, ev->win);
-	mlx_destroy_image(ev->mlx, ev->img);
-	ev->img = mlx_new_image(ev->mlx, 1.5 * ev->winx, 1.5 * ev->winy);
-	ev->p_img = mlx_get_data_addr(ev->img, &ev->bpp, &(ev->s_line), &(ev->ed));
-	ft_draw_julia(ev);
+	if (ev->c == 1)
+		ft_draw_julia(ev);
 	mlx_put_image_to_window(ev->mlx, ev->win, ev->img, 0, 0);
-	printf("Init : mlx = %p et win = %p\n", ev->mlx, ev->win);
 	return (printcontrol(ev));
 }

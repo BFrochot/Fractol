@@ -4,9 +4,7 @@ PATHTOMAKEFILE = ./libft/
 
 FILE =	main \
 		error \
-		get_next_line \
 		keymap \
-		splitquote \
 		fdfinit \
 		init_ev \
 		print_control \
@@ -25,7 +23,7 @@ $(NAME): $(OBJ)
 	@echo "|           sub compilation :          |"
 	@echo "|               libft                  |"
 	@make -C $(PATHTOMAKEFILE)
-	@gcc -o $(NAME) -Wall -Werror -L ./libft/ -lft -Wextra -g $(OBJ) -lmlx -framework OpenGL -framework AppKit
+	@gcc -o $(NAME) -Wall -Werror -lmlx -L ./libft/ -lft -Wextra -g $(OBJ) -framework OpenGL -framework AppKit
 	@echo "|                 FIN                  |"
 	@echo "----------------------------------------"
 	@echo "               ________"

@@ -6,7 +6,7 @@
 /*   By: bfrochot <bfrochot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/23 17:25:18 by bfrochot          #+#    #+#             */
-/*   Updated: 2017/06/23 23:01:10 by bfrochot         ###   ########.fr       */
+/*   Updated: 2017/06/25 17:36:01 by bfrochot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void	keymap2(int keycode, t_env *ev)
 int		keymap(int keycode, t_env *ev)
 {
 
-	printf("Keymap : mlx = %p et win = %p\n", ev->mlx, ev->win);
 	if (keycode == 53)
 		exit(0);
 	else if (keycode == 2 || keycode == 124)
@@ -48,6 +47,5 @@ int		keymap(int keycode, t_env *ev)
 		ev->zoom += ev->winx * 0.25 / ev->len;
 	keymap2(keycode, ev);
 	fdfinit(ev);
-	printf("Keymap : mlx = %p et win = %p\n", ev->mlx, ev->win);
 	return (0);
 }

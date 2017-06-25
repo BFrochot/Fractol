@@ -6,7 +6,7 @@
 /*   By: bfrochot <bfrochot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/23 12:37:45 by bfrochot          #+#    #+#             */
-/*   Updated: 2017/06/23 23:00:41 by bfrochot         ###   ########.fr       */
+/*   Updated: 2017/06/25 17:40:46 by bfrochot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,7 @@ typedef struct	s_env
 {
 	void	*mlx;
 	void	*win;
-	void	*save;
 	int		fd;
-	char	***array;
 	int		tx;
 	int		ty;
 	int		rx;

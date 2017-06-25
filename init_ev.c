@@ -6,7 +6,7 @@
 /*   By: bfrochot <bfrochot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/23 12:36:29 by bfrochot          #+#    #+#             */
-/*   Updated: 2017/06/23 23:01:16 by bfrochot         ###   ########.fr       */
+/*   Updated: 2017/06/25 18:56:49 by bfrochot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 void	initev(t_env *ev)
 {
-	ev->array = NULL;
 	ev->rx = -60;
 	ev->ry = 60;
-	ev->winx = 2560;
-	ev->winy = 1440;
+	ev->winx = 1000;
+	ev->winy = 1000;
 	ev->zoom = 1;
 	ev->p = ev->zoom / 10;
 	ev->tx = 0;
