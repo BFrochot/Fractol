@@ -6,7 +6,7 @@
 /*   By: bfrochot <bfrochot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/23 12:36:29 by bfrochot          #+#    #+#             */
-/*   Updated: 2017/06/25 18:56:49 by bfrochot         ###   ########.fr       */
+/*   Updated: 2017/06/28 19:51:50 by bfrochot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void	initev(t_env *ev)
 	ev->movey = 0;
 	ev->iter = 150;
 	ev->col = 0x0000ef;
+	ev->col = 0x01111;
 	ev->oldx = 200;
 	ev->oldy = 200;
 }

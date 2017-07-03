@@ -6,7 +6,7 @@
 /*   By: bfrochot <bfrochot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/23 12:08:24 by bfrochot          #+#    #+#             */
-/*   Updated: 2017/06/25 17:52:21 by bfrochot         ###   ########.fr       */
+/*   Updated: 2017/07/03 11:26:09 by bfrochot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,8 @@ char	isfractal(char *str)
 		return (1);
 	if (!ft_strcmp(str, "mandelbrot"))
 		return (2);
+	if (!ft_strcmp(str, "truc"))
+		return (3);
 	return (0);
 }
 
